@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+      int x,a,b;
+    scanf("%d %d %d",&x,&a,&b);
+     int profit=((x*a)-(x*b)-100);
+    printf("%d",profit);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
