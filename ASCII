@@ -1,0 +1,8 @@
+Read a code and print character for given code
+int main()
+{
+  int a;
+  scanf("%d",&a);
+  printf("%c",a);
+  return 0;
+}
