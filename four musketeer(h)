@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int x1,y1,x2,y2,x3,y3;
+    scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+    float r1=(x1+x2+x3)/3.0;
+    float r2=(y1+y2+y3)/3.0;
+    printf("%.1f\n%.1f",r1,r2);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
