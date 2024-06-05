@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char i;
+    scanf("%c",&i);
+    if(i>=65&&i<=90)
+    {
+        printf("Upper");
+    }
+        else if(i>=97&&i<=122)
+       {
+          printf("Lower");
+       }
+       else if(i>=48&&i<=57)
+       {
+          printf("Number");
+       }
+    else
+    {
+        printf("Symbol");
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
