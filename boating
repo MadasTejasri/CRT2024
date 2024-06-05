@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int w,a,c;
+    scanf("%d %d %d",&w,&a,&c);
+    int r2=a*75+c*30;
+    if(r2<=w)
+    {
+        printf("Boat is stable");
+    }
+    else
+    {
+       printf("Boat will drown");
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
