@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char r1;
+    scanf("%c",&r1);
+    if(r1=='a'||r1=='e'||r1=='i'||r1=='o'||r1=='u'||r1=='A'||r1=='E'||r1=='I'||r1=='O'||r1=='U')
+    {
+     printf("vowel");
+    }
+    else
+    {
+        printf("consonant");
+    }
+    return 0;
+}
