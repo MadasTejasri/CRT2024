@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+    // Write C code here
+    int n,r,d;
+    scanf("%d",&n);
+    while(n>0)
+    {
+    r=n%10;
+    n=n/10;
+    d=d*10+r;
+    }
+        printf("%d",d);
+    return 0;
+}
