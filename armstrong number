@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n,d,s=0,r,temp;
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        r=d*d*d;
+        s=s+r;
+    }
+    // Write C code here
+    if(s==temp)
+    printf("Armstrong number");
+    else
+    printf("Not a armstrong number");
+
+    return 0;
+}
