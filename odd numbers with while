@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a=1,n;
+    scanf("%d",&n);
+    while(a<=n)
+    {
+     printf("\n %d",a);
+     a=a+2;
+    }
+    return 0;
+}
