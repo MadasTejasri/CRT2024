@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i=1,p=2,sum=0;
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        sum=sum+p;
+        p=(p*10)+2;
+        i++;
+    }
+ printf("%d",sum);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
