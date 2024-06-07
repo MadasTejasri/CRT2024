@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     int n,r,s=1,s1=0;
+    scanf("%d ",&n);
+    while(n>0)
+    {
+     r=n%10;
+     n=n/10;
+        if(r==0)
+        {
+          s1=s1+r;
+        }
+        else
+        {
+          s=s*r;
+        }
+    }
+     printf("%d ",s);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
