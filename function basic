@@ -1,0 +1,15 @@
+#include <stdio.h>
+    void show()
+    {
+        printf("\nvignan");
+    }
+    void line()
+    {
+        printf("\n----------");
+    }
+    int main() {
+    // Write C code here
+      line();
+      show();
+      line();
+}
