@@ -1,0 +1,12 @@
+#include <stdio.h>
+void fun()
+{
+    printf("Good Morning\n");
+    fun();
+}
+
+int main() {
+    // Write C code here
+    fun();
+    return 0;
+}
