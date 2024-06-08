@@ -1,0 +1,13 @@
+#include <stdio.h>
+ int area()
+    {
+        int l,b;
+    scanf("%d %d",&l,&b);
+     int r=l*b;
+      printf("%d",r);
+        
+    }
+     int main() {
+    // Write C code here
+    area();
+}
