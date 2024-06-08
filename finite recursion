@@ -1,0 +1,16 @@
+#include <stdio.h>
+void fun(int c)
+{
+    if(c<=5)
+    {
+    printf("Good Morning\n");
+    fun(c+1);
+    }
+}
+
+int main() {
+    // Write C code here
+    int c=1;
+    fun(c);
+    return 0;
+}
