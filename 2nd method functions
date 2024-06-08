@@ -1,0 +1,14 @@
+#include <stdio.h>
+ int area ()
+    {
+       int l,b;
+       scanf("%d %d",&l,&b);
+       int a=l*b;
+       return a;
+    }
+    
+     int main() {
+    // Write C code here
+    int k=area();;
+    printf("%d",k);
+}
