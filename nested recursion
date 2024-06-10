@@ -1,0 +1,16 @@
+#include <stdio.h>
+int fun(int n)
+{
+    if(n>100)
+        return (n-10);
+    else 
+        return fun(fun(n+11));
+}
+int main() {
+    // Write C code here
+    int n;
+    n=fun(96);
+    printf("%d",n);
+
+    return 0;
+}
