@@ -1,0 +1,17 @@
+#include <stdio.h>
+void fun(int n)
+{
+    if(n>=1)
+    {
+        printf("\n %d",n);
+        fun(n-1);
+    }
+}
+int main() {
+    // Write C code here
+    int n;
+    scanf("%d",&n);
+    fun(n);
+
+    return 0;
+}
