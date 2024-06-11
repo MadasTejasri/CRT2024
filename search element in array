@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    scanf("%d",&n);
+    int a[n],i;
+    for(i=0;i<n;i++)
+    {
+     scanf(" %d",&a[i]);
+    }
+    int searchno;
+    scanf("%d",&searchno);
+    for(i=0;i<n;i++)
+    {
+        if(searchno==a[i])
+        {
+            printf("Element is found");
+            break;
+        }
+    }
+     if(i==n)   
+        {
+            printf("Element is  not found");
+        }
+    return 0;
+}
