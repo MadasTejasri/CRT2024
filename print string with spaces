@@ -21,6 +21,18 @@ int main() {
     
     return 0;
 }
+OR
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char name[50];
+    printf("Enter your name:");
+    fgets(name,50,stdin);
+    printf("%s",name);
+    
+    return 0;
+}
 OUTPUT:
 Enter your name:Teja sri Madas
 Teja sri Madas
