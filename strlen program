@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    // Write C code here 
+    char name[50];
+    printf("Enter your name:");
+    fgets(name,50,stdin);
+    int n=strlen(name);
+    printf("%d",n);
+    
+    return 0;
+}
+OUTPUT:
+Enter your name:Tejasri Madas
+14
