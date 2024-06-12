@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char name[50];
+    printf("Enter your name:");
+    scanf("%[^\n]s",name);
+    printf("%s",name);
+    
+    return 0;
+}
+OUTPUT:
+Enter your name:Teja sri Madas
+Teja sri Madas
