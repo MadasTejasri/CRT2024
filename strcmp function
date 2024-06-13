@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+    // Write C code here
+    char str1[50],str2[50];
+    scanf("%s",str1);
+    scanf("%s",str2);
+    int i=strcmp(str1,str2);//strcmpi:to ignore capital and small letters differnce 
+    if(i==0)
+    {
+        printf("Strings are equal");
+    }
+    else
+    {
+        printf("Strings are not equal");
+    }
+    return 0;
+}
