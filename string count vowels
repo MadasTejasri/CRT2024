@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     char str[100];
+    scanf("%[^\n]s",str);
+    int t,c=0;
+    for(t=0;str[t]!='\0';t++)
+    {
+        if(str[t]=='a'||str[t]=='e'||str[t]=='i'||str[t]=='o'||str[t]=='u'||str[t]=='A'||str[t]=='E'||str[t]=='I'||str[t]=='O'||str[t]=='U')
+        {
+            c=c+1;
+        }
+    }
+    printf("%d",c);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
