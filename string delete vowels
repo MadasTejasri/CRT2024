@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char str[100];
+    scanf("%s",str);
+    int i,j,n;
+    n=strlen(str);
+    for(i=0;i<n;i++)
+    {
+if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+{
+    for(j=i;j<n;j++)
+    {
+     str[j]=str[j+1];
+    }
+    i--;
+    n--;
+}
+    }
+    printf("%s",str);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
