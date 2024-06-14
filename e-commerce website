@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   char str[100];
+    scanf("%s",str);
+    int i,j,s=0,temp;
+    int n=strlen(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        for(j=i;str[j]!='\0';j++)
+        {
+            if(str[i]>str[j])
+            {
+                temp=str[i];
+                str[i]=str[j];
+                str[j]=temp;
+            }
+        }
+        s=str[0]+str[n-1];
+    }
+    printf("%d",s);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
