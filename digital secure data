@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+char c;
+    int n;
+    scanf("%c%d",&c,&n);
+if((c+n>=65&&c+n<=90)||(c+n>=97&&c+n<=122)){
+    printf("%c",c+n);
+}
+   else if(c>=97&&c<=122){
+       printf("%c",c+n+96-122); 
+           
+    }
+    else{
+        printf("%c",(n%26)+c+64-90+26);
+    }
+return 0;}
