@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     char str[100];
+    scanf("%s",str);
+    int i,s=0,c=0;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]=='#')
+            c++;
+        if(str[i]=='*')
+            s++;
+    }
+    if(c==s)
+    {
+        printf("0");
+    }
+    else if(c>s)
+    {
+        printf("%d",s-c);
+    }
+    else
+    {
+        printf("%d",s-c);
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
