@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  char str1[100],str2[100];
+    scanf("%s%s",str1,str2);
+    int i=strcmp(str1,str2);
+    if(i==0)
+    {
+        printf("Strings are same");
+    }
+    else
+    {
+        printf("Strings are not same");
+    }
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
