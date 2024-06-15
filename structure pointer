@@ -1,0 +1,14 @@
+#include <stdio.h>
+struct Sample{
+    int a,b;
+};
+struct Sample *s;
+int main() {
+    // Write C code here
+    printf("Enter two numbers");
+    scanf("%d %d",&s->a,&s->b);
+    int t=s->a+s->b;
+    printf("sum=%d",t);
+
+    return 0;
+}
