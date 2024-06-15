@@ -1,0 +1,51 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+//read employee no,name and basic salary.calculate HRA,DA,PF,Gross salary and net salary.
+//HRA(House rent allowance)-->15% of basic salary
+//DA--->10% of basic salary
+//PF--->5% of basic salary
+//Gross salary--->basic+HRA+DA
+//net salary----->gross-PF
+struct Employee
+{
+    int empno;
+    char name[40];
+    float sal,hra,da,pf,gross,net;
+};
+struct Employee e;
+int main() {
+       
+    // Write C code here
+    printf("Enter employee no");
+    scanf("%d",&e.empno);
+    printf("Enter name:");
+    scanf("%s",e.name);
+    printf("Enter basic salary");
+    scanf("%f",&e.sal);
+    e.hra=e.sal*15/100;
+    e.da=e.sal*10/100;
+    e.pf=e.sal*5/100;
+    e.gross=e.sal+e.hra+e.da;
+    e.net=e.gross-e.pf;
+    printf("Employee no     =%d\n",e.empno);
+    printf("Name            =%s\n",e.name);
+    printf("Basic salary    =%.2f\n",e.sal);
+    printf("HRA             =%.2f\n",e.hra);
+    printf("DA              =%.2f\n",e.da);
+    printf("PF              =%.2f\n",e.pf);
+    printf("Gross salary    =%.2f\n",e.gross);
+    printf("Net salary      =%.2f\n",e.net);
+    return 0;
+}
+OUTPUT:
+Enter employee no111
+Enter name:ttt
+Enter basic salary35000
+Employee no     =111
+Name            =ttt
+Basic salary    =35000.00
+HRA             =5250.00
+DA              =3500.00
+PF              =1750.00
+Gross salary    =43750.00
+Net salary      =42000.00
