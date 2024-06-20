@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        char G=s.next().charAt(0);
+        long N=s.nextLong();
+        if(1<=N && N<=100)
+        {
+        if(G=='M'||G=='m')
+        {
+            if(N>=60)
+            {
+                System.out.println("Senior Citizen");
+            }
+            else
+            {
+               System.out.println("Not A Senior Citizen"); 
+            }
+        }
+        if(G=='F' || G=='f')
+        {
+            if(N>=58)
+            {
+               System.out.println("Senior Citizen");
+            }
+            else
+            {
+                System.out.println("Not A Senior Citizen");
+            }
+        }
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
