@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int r,sum=0,t=0,t1;
+        while(n>0)
+        {
+         r=n%10;
+        if(r%2==0)
+        {
+            sum=r+1;
+        }
+        else
+        {
+            sum=r-1;
+        }
+        n=n/10;
+        t=t*10+sum;
+    }
+    n=t;
+    t=0;
+    while(n>0)
+    {
+        t1=n%10;
+        n=n/10;
+        t=t*10+t1;
+    }
+        System.out.print(t);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
