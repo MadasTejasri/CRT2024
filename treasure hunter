@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int g=s.nextInt();
+        int ben=s.nextInt();
+        int black=s.nextInt();
+        int b=g*ben/100;
+        int bla=(g-b)*black/100;
+        int other=(g-bla-b)/3;
+        System.out.println(b);
+        System.out.println(bla);
+        System.out.println(other);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
