@@ -7,7 +7,7 @@ public class Solution {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
         Scanner s=new Scanner(System.in);
         double n=s.nextDouble();
-        int d,t,r=0,temp;
+        int d,t,r=0,temp; 
         t=(int)n;
         temp=(int)Math.log10(n)+1;
         int i=1;
