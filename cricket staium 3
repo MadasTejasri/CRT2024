@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int l=s.nextInt();
+        int b=s.nextInt();
+        int  p=2*(l+b);
+        int a=l*b;
+        System.out.println(p);
+        System.out.println(a);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
