@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        while(t>0)
+        {
+            int a=s.nextInt();
+            char ch=s.next().charAt(0);
+            int b=s.nextInt();
+        switch(ch)
+        {
+            case '>':
+                 if(a>b)
+                 {
+                    System.out.println("Right");
+                 }
+                
+                else
+                {
+                    System.out.println("Wrong");
+                }
+                break;
+            case '<':
+                 if(a<b)
+                  {
+                        System.out.println("Right");
+                   }
+                 else
+                {
+                   System.out.println("Wrong");
+                 }
+                break;
+        }
+            t--;
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    }
+}
