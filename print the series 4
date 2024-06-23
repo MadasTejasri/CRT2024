@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int x1=0,x2=0;
+        for(int i=2;i<=n/2;i++)
+        {
+            x1=x1+2;
+            x2=x2+1;
+        }
+            if(n%2!=0)
+            {
+                x1=x1+2;
+                System.out.println(x1);
+            }
+            else
+            {
+                System.out.println(x2);
+            }
+
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
