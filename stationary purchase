@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int quant=s.nextInt();
+        int price=s.nextInt();
+    System.out.println("Quantity Ordered "+quant);
+    System.out.println("Price per item is Rs."+price);
+    int t=quant*price;
+    System.out.println("Total Amount = Rs."+t);
+     if(quant<=200)
+    {
+          Double GST=(float)t*0.18;
+          System.out.printf("GST - Rs.%.1f\n",GST);
+          System.out.printf("Net Amount Payable is Rs.%.1f\n",(float)t+GST);
+    }
+    else
+    {
+        Double total=(float)t*0.2;
+        System.out.printf("Discount Earned = Rs.%.1f",total);
+        System.out.printf("\nAmount after Discount - Rs.%.1f",t-total);
+        Double g=(float)(t-total)*0.18;
+        System.out.printf("\nGST - Rs.%.1f",g);
+        System.out.printf("\nNet Amount Payable is Rs.%.1f\n",t-total+g);
+    }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
