@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner s=new Scanner(System.in);
+        double n=s.nextDouble();
+        int d,t,r=0,temp;
+        t=(int)n;
+        temp=(int)Math.log10(n)+1;
+        int i=1;
+    while(i<=temp)
+    {
+        d=(int)n%10;
+        r+=Math.pow(d,temp);
+        n=n/10;
+        i++;
+    }
+    // Write C code here
+    if(r==t)
+       System.out.printf("Yes");
+    else
+        System.out.printf("No");
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
