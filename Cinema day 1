@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int d=s.nextInt();
+        int m=s.nextInt();
+        int y=s.nextInt();
+        int stu=s.nextInt();
+        if(stu>50 && stu<100)
+        {
+            int sum=d+m+y;
+        if(sum%3==0 && sum%4==0)
+        {
+            System.out.println("Cinema Day");
+        }
+        }
+        else
+        {
+            System.out.println("Not a Cinema Day");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
