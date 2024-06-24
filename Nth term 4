@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int a=14;
+        for(int i=1;i<n;i++)
+        {
+        if(i%2!=0)
+        {
+            a=a*2;
+        }
+        else
+        {
+           a=a-8;
+        }
+        }
+        System.out.println(a);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
