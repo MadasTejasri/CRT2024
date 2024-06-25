@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+    {
+       a[i]=s.nextInt();
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i;j<n;j++)
+        {
+            if(a[i]>a[j]){
+            int t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+        }
+        }
+    }
+    for(int k=0;k<n;k++)
+    {
+    if(k%2==0)
+    {
+        System.out.print(a[k]+" ");
+    }
+    }
+    for(int m=0;m<n;m++)
+    {
+        if(m%2!=0)
+        {
+            System.out.print(a[m]+" ");
+        }
+    }
+    
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
