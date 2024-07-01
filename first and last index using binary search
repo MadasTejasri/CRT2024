@@ -1,0 +1,57 @@
+import java.util.*;
+class HelloWorld {
+    static int FirstCount(int a[],int low,int high,int key)
+    {
+        int res=-1;
+        while(low<=high)
+        {
+            int mid=(low+high)/2;
+            if(a[mid]==key)
+            {
+              res=mid;
+              high=mid-1;
+            }
+            else if(key<a[mid])
+              high=mid-1;
+            else if(key>a[mid])
+              low=mid+1;
+        }
+        return res;
+    }
+    static int LastCount(int a[],int low,int high,int key)
+    {
+        int res=-1;
+        while(low<=high)
+        {
+            int mid=(low+high)/2;
+            if(a[mid]==key)
+            {
+              res=mid;
+              low=mid+1;
+            }
+            else if(key<a[mid])
+              high=mid-1;
+            else if(key>a[mid])
+              low=mid+1;
+        }
+        return res;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=s.nextInt();
+        }
+        int k=s.nextInt();
+       int t=FirstCount(a,0,n-1,k);
+       int t1=LastCount(a,0,n-1,k);
+       System.out.println(t+" "+t1);
+    }
+}
+OUTPUT:
+6
+2 3 3 6 6 7
+6
+3 4
