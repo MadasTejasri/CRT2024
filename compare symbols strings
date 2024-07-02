@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str=s.next();
+        int c=0,c1=0;
+      for(int i=0;i<str.length();i++)
+      {
+          char ch=str.charAt(i);
+          if(ch=='#')
+              c++;
+          if(ch=='*')
+              c1++;       
+          }
+        if(c==c1)
+        {
+            System.out.println("0");
+        }
+        else if(c>c1)
+        {
+            System.out.println(c1-c);
+        }
+        else
+        {
+            System.out.println(c-c1);
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
