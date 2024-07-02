@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String s1=s.nextLine();
+        char ch[]=s1.toCharArray();
+        for(int i=0;i<ch.length;i++)
+        {
+        if(Character.isLowerCase(ch[i]))
+        {
+            System.out.print(Character.toUpperCase(ch[i]));
+        }
+        if(Character.isUpperCase(ch[i]))
+        {
+            System.out.print(Character.toLowerCase(ch[i]));
+        }
+        if(Character.isSpace(ch[i]))
+        {
+            System.out.print(" ");
+        }
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
