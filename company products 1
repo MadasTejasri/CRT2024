@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str=s.next();
+        char ch[]=str.toCharArray();
+        for(int i=1;i<str.length();i++)
+        {
+            if(ch[i-1]<ch[i])
+            {
+                System.out.print(ch[i]);
+            }
+            else
+            {
+                System.out.print(ch[i-1]);
+            }
+            i=i+1;
+        }
+        int n=str.length();
+        if(n%2!=0)
+        {
+            System.out.print(ch[n-1]);
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
