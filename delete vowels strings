@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str=s.next();
+        int c=0;
+        char t[]=str.toCharArray();
+        for(int i=0;i<str.length();i++)
+        {
+            char ch=str.charAt(i);
+            if(ch=='a'||ch=='i'||ch=='e'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='O'||ch=='I'||ch=='U')
+            {
+              for(int j=i;j<t.length-1;j++)
+              {
+                  t[j]=t[j+1];
+                    c=c+1;
+              }
+            }
+        }
+        for(int i=0;i<t.length-c;i++)
+        System.out.print(t[i]);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
