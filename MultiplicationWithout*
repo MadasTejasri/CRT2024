@@ -1,0 +1,16 @@
+import java.util.*;
+class MultiplicationWithout*
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        int m=s.nextInt();
+        int n=s.nextInt();
+        int mul=0;
+        for(int i=1;i<=n;i++)
+        {
+            mul=mul+m;
+        }
+        System.out.println(mul);
+    }
+}
