@@ -1,0 +1,24 @@
+class PrimeDowhile{
+public static void main(String args[])
+{
+    int low=2,c=0,i=1;
+    do
+    {
+        i=1;     
+        c=0;
+        while(i<=low)
+       {
+           if(low%i==0)
+           {
+              c++;
+           }
+           i++;
+       }
+        if(c==2)
+      {
+        System.out.println(low);
+      }
+      low++;
+    }while(low<=10);
+}
+}
