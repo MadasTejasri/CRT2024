@@ -228,6 +228,260 @@ class DoubleLinkedList
             {
                 System.out.println("Invalid choice");
             }
+OUTPUT:
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+1
+11
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+1
+22
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+1
+33
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+1
+44
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+1
+55
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+11 22 33 44 55
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+3
+55 44 33 22 11
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+4
+Enter an element
+10
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+10 11 22 33 44 55
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+5
+Enter a element
+25
+Enter the position
+4
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+10 11 22 25 33 44 55
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+6
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+11 22 25 33 44 55
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+7
+Enter a position
+3
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+11 22 33 44 55
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+8
+
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+11 22 33 44
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+3
+44 33 22 11
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+2
+11 22 33 44
+1.Create
+2.Forward Traversal
+3.Backward Traversal
+4.Insert at Beggining
+5.Insert at Position
+6.Delete at Beginning
+7.Delete at Position
+8.Delete Last
+9.Exit
+Enter your choice
+9
         }
+
     }
 }
