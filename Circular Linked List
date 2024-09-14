@@ -1,0 +1,415 @@
+import java.util.*;
+class Node
+{
+    int data;
+    Node next;
+    Node(int x)
+    {
+        data=x;
+        next=null;
+    }
+}
+class CircularSingleList
+{
+    Node head;
+    CircularSingleList()
+    {
+        head=null;
+    }
+    
+    void create(int x)
+    {
+        Node n=new Node(x);
+        if(head==null)
+        {
+           head=n;
+           n.next=head;
+        }
+        else
+        {
+          Node temp=head;
+          while(temp.next!=head)
+          {
+              temp=temp.next;
+          }
+          n.next=head;
+          temp.next=n;
+        }
+    }
+    
+    void display()
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty");
+            return;
+        }
+        Node temp=head;
+        while(temp.next!=head)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.print(temp.data+" ");
+    }
+    
+    void insertFirst(int x)
+    {
+        Node n=new Node(x);
+        if(head==null)
+        {
+            head=n;
+            n.next=head;
+        }
+        Node temp=head;
+        while(temp.next!=head)
+        {
+            temp=temp.next;
+        }
+        temp.next=n;
+        n.next=head;
+        head=n;
+    }
+
+    void insertPos(int x,int pos)
+    {
+        Node n=new Node(x);
+        if(head==null)
+        {
+            head=n;
+            n.next=head;
+        }
+        Node temp=head;
+        Node prev=null;
+        int count=1;
+        while(count<pos && temp.next!=head)
+        {
+            count=count+1;
+            prev=temp;
+            temp=temp.next;
+        }
+        if(temp.next==head)
+        {
+            temp.next=n;
+            n.next=head;
+        }
+        else
+        {
+            n.next=temp;
+            prev.next=n;
+        }
+    }
+
+    void deleteFirst()
+    {
+        if(head==null)
+        {
+            System.out.println("List is Empty");
+            return;
+        }
+        else
+        {
+            Node temp=head;
+            while(temp.next!=head)
+            {
+                temp=temp.next;
+            }
+            temp.next=head.next;
+            head=head.next;
+        }
+    }
+
+    void deletePos(int pos)
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty");
+            return;
+        }
+        Node temp=head;
+        Node prev=null;
+        int count=1;
+        while(count<pos && temp.next.next!=head)
+        {
+            prev=temp;
+            temp=temp.next;
+            count++;
+        }
+        if(temp.next.next==head)
+        {
+            temp.next=head;
+        }
+        else
+        {
+            prev.next=temp.next;
+        }
+    }
+    
+    void deleteLast()
+    {
+        if(head==null)
+        {
+            System.out.println("List is empty");
+            return;
+        }
+        Node temp=head;
+        while(temp.next.next!=head)
+        {
+            temp=temp.next;
+        }
+        temp.next=head;
+    }
+}
+class CircularLinkedList
+{
+  public static void main(String args[])
+  {
+    Scanner s=new Scanner(System.in);
+    CircularSingleList c1=new CircularSingleList();
+    for(;;)
+    {
+        System.out.println("\n1.Create\n2.Display\n3.Insert at Beginning\n4.Insert at any position\n5.Delete at Beginning\n6.Delete at any Position\n7.Delete Last\n8.Exit");
+        System.out.println("Enter your choice");
+        int ch=s.nextInt();
+        if(ch==1)
+        {
+            System.out.println("Enter a element");
+            int x=s.nextInt();
+            c1.create(x);
+        }
+        else if(ch==2)
+        {
+            c1.display();
+        }
+        else if(ch==3)
+        {
+            System.out.println("Enter a element");
+            int x=s.nextInt();
+            c1.insertFirst(x);
+        }
+        else if(ch==4)
+        {
+            System.out.println("Enter the element");
+            int x=s.nextInt();
+            System.out.println("Enter the position");
+            int pos=s.nextInt();
+            c1.insertPos(x,pos);
+        }
+        else if(ch==5)
+        {
+            c1.deleteFirst();
+        }
+        else if(ch==6)
+        {
+            System.out.println("Enter a position");
+            int pos=s.nextInt();
+            c1.deletePos(pos);
+        }
+        else if(ch==7)
+        {
+            c1.deleteLast();
+        }
+        else if(ch==8)
+        {
+            break;
+        }
+        else
+        {
+            System.out.println("Invalid choice");
+        }
+    }
+}
+}
+
+OUTPUT:
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+1
+Enter a element
+11
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+1
+Enter a element
+22
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+1
+Enter a element
+33
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+1
+Enter a element
+44
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+11 22 33 44
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+3
+Enter a element
+5
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+5 11 22 33 44
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+4
+Enter the element
+21
+Enter the position
+3
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+5 11 21 22 33 44
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+5
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+11 21 22 33 44
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+6
+Enter a position
+2
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+11 22 33 44
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+7
+
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+2
+11 22 33
+1.Create
+2.Display
+3.Insert at Beginning
+4.Insert at any position
+5.Delete at Beginning
+6.Delete at any Position
+7.Delete Last
+8.Exit
+Enter your choice
+8
