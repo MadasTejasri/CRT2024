@@ -1,0 +1,172 @@
+import java.util.*;
+class Node
+{
+    int data;
+    Node next;
+    Node(int x)
+    {
+        data=x;
+        next=null;
+    }
+}
+class MyStack
+{
+    Node head;
+    MyStack()
+    {
+       head=null;
+    }
+
+    void push(int x)
+   {
+      Node n=new Node(x);
+      if(n==null)
+    {
+        System.out.println("Stack is Overflow");
+        return;
+    }
+    if(head==null)
+    {
+        head=n;
+    }
+    else
+    {
+        n.next=head;
+        head=n;
+    }
+  }
+
+  void pop()
+  {
+    if(head==null)
+    {
+        System.out.println("Stack is underflow");
+        return;
+    }
+    System.out.println(head.data+" is deleted");
+    head=head.next;
+  }
+
+  void display()
+  {
+    if(head==null)
+    {
+        System.out.println("Stack is empty");
+        return;
+    }
+    Node temp;
+    for(temp=head;temp!=null;temp=temp.next)
+    {
+        System.out.println(temp.data+" ");
+    }
+   }
+}
+  class StackUsingLL
+  {
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        MyStack s1=new MyStack();
+        for(;;)
+        {
+            System.out.println("\n1.Push\n2.Pop\n3.Display\n4.Exit");
+            System.out.println("Enter your choice");
+            int ch=s.nextInt();
+            if(ch==1)
+            {
+                System.out.println("Enter a element");
+                int x=s.nextInt();
+                s1.push(x);
+            }
+            else if(ch==2)
+            {
+                s1.pop();
+            }
+            else if(ch==3)
+            {
+                s1.display();
+            }
+            else if(ch==4)
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid choice");
+            }
+        }
+    }
+}
+
+OUTPUT:
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+1
+Enter a element
+11
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+1
+Enter a element
+22
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+1
+Enter a element
+33
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+1
+Enter a element
+44
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+1
+Enter a element
+55
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+2
+55 is deleted
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+3
+44
+33
+22
+11
+
+1.Push
+2.Pop
+3.Display
+4.Exit
+Enter your choice
+4
