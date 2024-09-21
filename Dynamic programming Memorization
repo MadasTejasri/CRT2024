@@ -1,0 +1,23 @@
+class Solution {
+    static int fib(int dp[],int n)
+    {
+        if(n==0)
+          {
+              return dp[n]=0;
+          }
+         if(n==1)
+          {
+              return dp[n]=1;
+          }
+         if(dp[n]!=-1)
+         {
+            return dp[n];
+         }
+         return dp[n]=(fib(dp,n-1)+fib(dp,n-2))%1000000007;
+    }
+    static int nthFibonacci(int n){
+        int a[]=new int[n+1];
+        Arrays.fill(a,-1);
+        return fib(a,n);
+    }
+}
