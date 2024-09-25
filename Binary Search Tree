@@ -1,0 +1,412 @@
+import java.util.*;
+class BST
+{
+    public static Node root;
+    public static class Node
+    {
+        int data;
+        Node left,right;
+        Node(int x)
+        {
+            data=x;
+            left=null;
+            right=null;
+        }
+    }
+    public static void createRoot(int x)
+    {
+        Node n=new Node(x);
+        if(root==null)
+        {
+            root=n;
+        }
+    }
+    
+    public static Node insert(int x,Node root)
+    {
+        Node n=new Node(x);
+        if(root==null)
+        {
+            root=n;
+            return root;
+        }
+        else if(root.data>x)
+        {
+           root.left=insert(x,root.left);
+        }
+        else if(root.data<x)
+        {
+            root.right=insert(x,root.right);
+        }
+        return root;
+    }
+    
+    public static void preorder(Node root)
+    {
+        if(root!=null)
+        {
+            System.out.println(root.data+" ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
+    
+    public static void inorder(Node root)
+    {
+        if(root!=null)
+        {
+            inorder(root.left);
+            System.out.println(root.data+" ");
+            inorder(root.right);
+        }
+    }
+    
+    public static void postorder(Node root)
+    {
+        if(root!=null)
+        {
+            postorder(root.left);
+            postorder(root.right);
+            System.out.println(root.data+" ");
+        }
+    }
+    
+    public static void search(int x,Node root)
+    {
+        if(root!=null && root.data==x)
+        {
+            System.out.println("Key is found");
+        }
+        else if(root!=null && root.data>x)
+        {
+            search(x,root.left);
+        }
+        else if(root!=null && root.data<x)
+        {
+            search(x,root.right);
+        }
+    }
+    
+    public static void max(Node root)
+    {
+        if(root!=null && root.right!=null)
+        {
+            root=root.right;
+        }
+        System.out.println(root.right.data);
+    }
+    
+    public static void min(Node root)
+    {
+        if(root!=null && root.left!=null)
+        {
+            root=root.left;
+        }
+        System.out.println(root.left.data);
+    }
+    
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        while(true)
+        {
+            System.out.println("\n1.createroot\n2.Insert\n3.preorder\n4.inorder\n5.postorder\n6.search\n7.maximum element\n8.minimum element\n9.Exit");
+            System.out.println("Enter your choice");
+            int ch=s.nextInt();
+            if(ch==1)
+            {
+                int x=s.nextInt();
+                createRoot(x);
+            }
+            else if(ch==2)
+            {
+                System.out.println("Enter a element");
+                int x=s.nextInt();
+               
+                insert(x,root);
+            }
+            else if(ch==3)
+            {
+                preorder(root);
+            }
+            else if(ch==4)
+            {
+                inorder(root);
+            }
+            else if(ch==5)
+            {
+                postorder(root);
+            }
+            else if(ch==6)
+            {
+                int x=s.nextInt();
+                search(x,root);
+            }
+            else if(ch==7)
+            {
+                max(root);
+            }
+            else if(ch==8)
+            {
+                min(root);
+            }
+            else if(ch==9)
+            {
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid choice");
+            }
+        }
+    }
+}
+
+OUTPUT:
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+1
+50
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+40
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+20
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+45
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+60
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+55
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+2
+Enter a element
+65
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+3
+50 
+40 
+20 
+45 
+60 
+55 
+65 
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+4
+20 
+40 
+45 
+50 
+55 
+60 
+65 
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+5
+20 
+45 
+40 
+55 
+65 
+60 
+50 
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+6
+45
+Key is found
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+52
+Invalid choice
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+6
+52
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+6
+65
+Key is found
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+7
+65
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+8
+20
+
+1.createroot
+2.Insert
+3.preorder
+4.inorder
+5.postorder
+6.search
+7.maximum element
+8.minimum element
+9.Exit
+Enter your choice
+9
+
+=== Code Execution Successful ===
