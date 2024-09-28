@@ -1,0 +1,20 @@
+import java.util.*;
+class p
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter no. of pizza");
+        int np=s.nextInt();
+        System.out.println("Enter no. of puffs");
+        int npu=s.nextInt();
+        System.out.println("Enter no. of cooldrinks");
+        int nc=s.nextInt();
+        int ppi=100;
+        int ppu=20;
+        int pco=10;
+        int tp=np*ppi+npu*ppu+nc*pco;
+        System.out.println(tp);
+        
+    }
+}
