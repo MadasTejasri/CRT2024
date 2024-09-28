@@ -1,0 +1,25 @@
+import java.util.*;
+import java.text.*;
+class fuel
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        DecimalFormat df2 =new DecimalFormat("0.00");
+        System.out.println("Enter the no of liters to fill the tank");
+        double lit=s.nextDouble();
+        if(lit<0)
+        {
+            System.out.println("Invalid choice");
+        }
+        System.out.println("Enter the distance covered");
+        double dist=s.nextDouble();
+        double km,miles;
+        km=(lit/dist)*100;
+        dist=dist*0.6214;
+        lit=lit*0.2642;
+        miles=(dist/lit);
+        System.out.println("Litres/100KM \n"+df2.format(km));
+        System.out.println("Miles/gallon \n"+df2.format(miles));
+    }
+}
